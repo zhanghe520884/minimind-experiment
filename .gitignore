@@ -1,6 +1,55 @@
+# === 大文件 / 训练产物 ===
+out/*.pth
+checkpoints/
+*.pth
+!exp_lora/models/from_mine_768.pth
+!out/from_mine_768.pth
+*.safetensors
+*.bin
+
+# === 数据集 ===
+dataset/*.jsonl
+dataset/*.json
+dataset/*.csv
+
+# === 下载的官方模型 ===
+MiniMind2-Small-Official/
+minimind-3-Official/
+*-Official/
+
+# === Python 缓存 ===
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# === 备份 / 临时文件 ===
+backup_*/
+*.bak
+*.tmp
+*.log
+30M_results/
+
+# === IDE ===
+.vscode/
+.idea/
+*.swp
+
+# === 系统文件 ===
 .DS_Store
-out
-website/
-docs-minimind/
+Thumbs.db
+
+# === 你的本地文档(隐私) ===
+mydoc.docx
+mydoc.doc
+exp_lora/data/my_sft.jsonl
+
+# === 但是要保留以下文件 ===
+!exp_lora/scripts/*.py
+!eval_compare.py
+!download_*.py
+!plot_loss.py
+!.gitignore
+!.gitkeep

@@ -55,6 +55,12 @@ def train_epoch(epoch, loader, iters, start_step=0, wandb=None):
             current_lr = optimizer.param_groups[-1]['lr']
             eta_min = spend_time / max(step - start_step, 1) * (iters - step) // 60
             Logger(f'Epoch:[{epoch + 1}/{args.epochs}]({step}/{iters}), loss: {current_loss:.4f}, logits_loss: {current_logits_loss:.4f}, aux_loss: {current_aux_loss:.4f}, lr: {current_lr:.8f}, epoch_time: {eta_min:.1f}min')
+            
+            import os
+            os.makedirs('../out', exist_ok=True)
+            with open('../out/sft_loss.csv', 'a', encoding='utf-8') as _f:
+                _f.write(f"{epoch},{step},{loss.item() * args.accumulation_steps:.6f},{optimizer.param_groups[-1]['lr']:.8e}\n")
+            
             if wandb: wandb.log({"loss": current_loss, "logits_loss": current_logits_loss, "aux_loss": current_aux_loss, "learning_rate": current_lr, "epoch_time": eta_min})
 
         if (step % args.save_interval == 0 or step == iters) and is_main_process():
