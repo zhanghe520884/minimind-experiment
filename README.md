@@ -1,4 +1,4 @@
-# MiniMind 本地训练与文档 LoRA 微调实验
+# MiniMind 本地训练与华中科技大学研究生手册文档 LoRA 微调实验
 
 基于开源项目 [MiniMind](https://github.com/jingyaogong/minimind),完整复现了 minimind-3 (64M) 的预训练、SFT 与 LoRA 微调全流程。
 
@@ -16,6 +16,7 @@
 - **Python**: 3.10
 
 ## 📂 项目结构
+```
 .
 ├── model/                    # 模型架构(沿用官方)
 ├── trainer/                  # 训练脚本(添加了 loss 落盘代码)
@@ -28,7 +29,7 @@
 ├── eval_compare.py           # 三方对比测试脚本(基于官方 eval_llm 改造)
 ├── plot_loss.py              # loss 曲线绘制脚本
 └── 实验报告.docx             # 完整实验报告
-
+```
 ## 🚀 快速开始
 
 ### 1. 安装依赖
