@@ -1,5 +1,7 @@
 # MiniMind 本地训练与华中科技大学研究生手册文档 LoRA 微调实验
 
+_**说明：训练好的权重约130MB，无法上传至仓库，故out文件夹下没有训练好的.pth文件，只有LoRA训练好的小权重**_
+
 基于开源项目 [MiniMind](https://github.com/jingyaogong/minimind),完整复现了 minimind-3 (64M) 的预训练、SFT 与 LoRA 微调全流程。
 
 ## 📌 实验亮点
