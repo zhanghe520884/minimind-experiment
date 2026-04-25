@@ -8,7 +8,7 @@ _**说明：训练好的权重约130MB，无法上传至仓库，故out文件夹
 
 - 🔥 完整复现 minimind-3 主线版本 (hidden_size=768, n_layers=8, ~64M 参数)
 - 📊 自训模型 vs 官方 minimind-3 三方对比测试
-- 🎯 12 万字本地文档 LoRA 微调,产出 523 KB 权重
+- 🎯 12 万字本地文档（华中科技大学研究生手册） LoRA 微调,产出 779 KB 权重
 - 📈 详尽的 loss 曲线、训练日志与对比报告
 
 ## 🛠️ 实验环境
@@ -27,10 +27,10 @@ _**说明：训练好的权重约130MB，无法上传至仓库，故out文件夹
 │   ├── scripts/              # 数据处理与对比脚本
 │   ├── data/                 # LoRA 训练数据(已 gitignore)
 │   └── models/               # LoRA 权重产物
-│       └── from_mine_768.pth # 文档 LoRA 权重 (523 KB)
+│       └── from_mine_768.pth # 文档 LoRA 权重 (779 KB)
 ├── eval_compare.py           # 三方对比测试脚本(基于官方 eval_llm 改造)
 ├── plot_loss.py              # loss 曲线绘制脚本
-└── 实验报告.docx             # 完整实验报告
+└── mydoc.docx                # 华中科技大学研究生手册.docx文档
 ```
 ## 🚀 快速开始
 
